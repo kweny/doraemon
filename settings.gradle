@@ -1,0 +1,4 @@
+rootProject.name = 'doraemon'
+include 'doraemon-thumbnail'
+include 'doraemon-toolkit'
+

@@ -1,0 +1,1 @@
+bin\java -m org.kweny.doraemon.thumbnail/org.kweny.doraemon.thumbnail.ThumbnailApplication

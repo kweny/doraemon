@@ -1,0 +1,42 @@
+// 子模块通用配置
+allprojects {
+    buildscript {
+        repositories {
+            jcenter()
+            mavenCentral()
+        }
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    // Java 版本
+    sourceCompatibility = 11
+    targetCompatibility = 11
+
+    // 中文编译乱码
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+    group = 'org.kweny.doraemon'
+    version = '0.0.1'
+
+    // 扩展定义
+    ext {
+
+    }
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    // 排除依赖
+    configurations {
+    }
+
+    // 通用依赖
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        compile group: 'org.jetbrains', name: 'annotations', version: '16.0.3'
+    }
+}
